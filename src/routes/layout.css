@@ -1,1 +1,43 @@
 @import 'tailwindcss';
+
+@import '@skeletonlabs/skeleton'; 
+@import '@skeletonlabs/skeleton-svelte'; 
+@import '@skeletonlabs/skeleton/themes/cerberus';
+
+.prose {
+  line-height: 1.7;
+  
+  /* headings */
+  h1 { @apply text-4xl font-bold mb-6 mt-8 block text-balance; }
+  h2 { @apply text-2xl font-bold mb-4 mt-8 block; }
+  h3 { @apply text-xl font-bold mb-3 mt-6 block; }
+  
+  /* paragraphs */
+  p { @apply mb-4 text-base opacity-90; }
+  
+  /* links */
+  a { @apply text-primary-500 underline hover:text-primary-600 transition-colors; }
+
+  /* lists */
+  ul {
+    list-style-type: disc !important;
+    padding-left: 1.5rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+  
+  ol {
+    list-style-type: decimal !important;
+    padding-left: 1.5rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  li {
+    @apply mb-1.5;
+    display: list-item !important;
+  }
+  
+  /* code blocks */
+  code:not(pre code) {
+    @apply bg-surface-200 dark:bg-surface-800 px-1.5 py-0.5 rounded text-sm font-mono text-secondary-600 dark:text-secondary-400;
+  }
+}
